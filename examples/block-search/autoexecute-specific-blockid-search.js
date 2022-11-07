@@ -10,6 +10,8 @@ const { DltNameOptions } = OverledgerTypes;
 
 const log = log4js.getLogger(courseModule);
 
+const searchableBlockId = "000000000000000f6875005ddbb8351380ad43d8238426a19d8a77db28056ae2";
+
 // Initialize log
 log4js.configure({
   appenders: {
@@ -62,14 +64,14 @@ log.info("Executing ", courseModule);
     );
     const overledgerRequestMetaData = {
       location: {
-        technology: "Ethereum",
-        network: "Ropsten Testnet",
+        technology: "Bitcoin",
+        network: "Testnet",
       },
     };
     const overledgerInstance = overledger.provider.createRequest(
       refreshTokensResponse.accessToken.toString(),
     );
-
+/*
     log.info("Sending a Request to Overledger for the Latest Block");
     const overledgerLatestBlockResponse = await overledgerInstance.post(
       "/autoexecution/search/block/latest",
@@ -84,7 +86,14 @@ log.info("Executing ", courseModule);
       `/autoexecution/search/block/${parentBlockId}`,
       overledgerRequestMetaData,
     );
-
+*/
+    log.info("Sending a Request to Overledger for the searchableBlockId Block (Using BlockId Search)");
+    const parentBlockId = searchableBlockId;
+    const overledgerParentBlockResponse = await overledgerInstance.post(
+      `/autoexecution/search/block/${parentBlockId}`,
+      overledgerRequestMetaData,
+    );
+    
     log.info(
       `Printing Out Overledger's Response:\n\n${JSON.stringify(
         overledgerParentBlockResponse.data,

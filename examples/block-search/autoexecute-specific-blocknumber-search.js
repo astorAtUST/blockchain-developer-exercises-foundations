@@ -9,6 +9,7 @@ const courseModule = "specific-blocknumber-search";
 const { DltNameOptions } = OverledgerTypes;
 
 const log = log4js.getLogger(courseModule);
+const searchableBlockNumber = 2405222;
 
 // Initialize log
 log4js.configure({
@@ -60,14 +61,15 @@ log.info("Executing ", courseModule);
     log.info("Createing the Overledger Request Object with Correct Location");
     const overledgerRequestMetaData = {
       location: {
-        technology: "XRP Ledger",
+        technology: "Bitcoin",
         network: "Testnet",
       },
     };
     const overledgerInstance = overledger.provider.createRequest(
       refreshTokensResponse.accessToken.toString(),
     );
-
+/*
+    //Commented to use the section that allows specifying a block number
     log.info("Sending a Request to Overledger for the Latest Block");
     const overledgerLatestBlockResponse = await overledgerInstance.post(
       "/autoexecution/search/block/latest",
@@ -82,7 +84,13 @@ log.info("Executing ", courseModule);
       `/autoexecution/search/block/${parentBlockNumber}`,
       overledgerRequestMetaData,
     );
-
+*/
+    log.info("Sending a Request to Overledger for the searchableBlockNumber Block (Using BlockNumber Search)");
+    const parentBlockNumber = searchableBlockNumber;
+    const overledgerParentBlockResponse = await overledgerInstance.post(
+      `/autoexecution/search/block/${parentBlockNumber}`,
+      overledgerRequestMetaData,
+    );
     log.info(
       `Printing Out Overledger's Response:\n\n${JSON.stringify(
         overledgerParentBlockResponse.data,

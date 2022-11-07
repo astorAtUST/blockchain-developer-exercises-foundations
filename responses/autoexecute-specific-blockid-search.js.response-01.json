@@ -1,0 +1,141 @@
+{
+    "preparationBlockSearchResponse": {
+        "requestId": "2f40d4db-d729-4118-bdad-1976a4fdd054",
+        "gatewayFee": {
+            "amount": "0",
+            "unit": "QNT"
+        }
+    },
+    "executionBlockSearchResponse": {
+        "location": {
+            "technology": "Ethereum",
+            "network": "ropsten testnet"
+        },
+        "status": {
+            "value": "PENDING",
+            "code": "BLK1002",
+            "description": "Block is currently in a pending status and will be confirmed as successful or failed after a sufficient block number has been reached",
+            "message": "Block is pending.",
+            "timestamp": "1667842716"
+        },
+        "block": {
+            "blockId": "0x5c6e830ec3391117e62ff633fe1a9be0520d6924cb3b5804690d6339316110f0",
+            "timestamp": "1667842716",
+            "number": 13273866,
+            "hashes": [
+                {
+                    "value": "0x5c6e830ec3391117e62ff633fe1a9be0520d6924cb3b5804690d6339316110f0",
+                    "type": "BLOCK_HASH"
+                },
+                {
+                    "value": "0x0d68350d09b90dd27bf21814de10300d579e8753ebd888d4a18a42762951e896",
+                    "type": "PARENT_HASH"
+                },
+                {
+                    "value": "0x95417b0d0346a8456eba5eb3d4933dc052d06aa666ed4f60ad416eb797c729bc",
+                    "type": "CHILD_HASH"
+                },
+                {
+                    "value": "0xfc0a0fff0899136834c61326c1d43f059ea61865c09783eb38f6e0ab0bd758ec",
+                    "type": "TRANSACTIONS_MERKLE_ROOT"
+                },
+                {
+                    "value": "0x68e577acdfd4c194910dd23593f7cf09844aca07ca9b67217063f67f1e3d0220",
+                    "type": "STATE_MERKLE_ROOT"
+                },
+                {
+                    "value": "0x40bf3293f44712f8fa754cdc1922b59ac0c14b131a542f98cb7ff10902912128",
+                    "type": "TRANSACTION_RECEIPTS_MERKLE_ROOT"
+                }
+            ],
+            "linkedBlocks": {
+                "parent": "0x0d68350d09b90dd27bf21814de10300d579e8753ebd888d4a18a42762951e896",
+                "child": "0x95417b0d0346a8456eba5eb3d4933dc052d06aa666ed4f60ad416eb797c729bc"
+            },
+            "size": [
+                {
+                    "type": "MEMORY",
+                    "value": "2549"
+                },
+                {
+                    "type": "COMPUTATION",
+                    "value": "425402"
+                }
+            ],
+            "numberOfTransactions": 9,
+            "transactionIds": [
+                "0xd67e64a063c3bd9c3c1aac2395ebc4fc207853fad381acf8bc4c193296ac7427",
+                "0x5bb521580faf9b8eecd7d2dd5c336812a648afd9421dbdccae666ebc2b28fa76",
+                "0x7078573c341efaa0aa48fa4ce94000fcabc34c8886c2f6793eb2da911cc44c9b",
+                "0x5562cd703ab60865c35981c47555b3c708fe4da99805e58c2828b5f9a07eb07a",
+                "0xb514ccf58554f39ddd1bcdac356b1cc144fa37f6b010172d370a6c520b430b7f",
+                "0xa1b5bd77a3c63417aa22319d5b5b00972f12fcb38f896cffdf7e14a5cc97d4d3",
+                "0x0943a56a436eb94c861032abdeb432b82a7fa559a45347adb76cd813aceaacdc",
+                "0xa60ba8ec75074c8d36b90491aed2f56592021b898d2015771d8489e98e7420d9",
+                "0x53484fd8d7fdd428c4a3a32f514d7e106a5558be8dde9e16d50ac6770badb499"
+            ],
+            "message": "0x",
+            "nativeData": {
+                "number": 13273866,
+                "hash": "0x5c6e830ec3391117e62ff633fe1a9be0520d6924cb3b5804690d6339316110f0",
+                "parentHash": "0x0d68350d09b90dd27bf21814de10300d579e8753ebd888d4a18a42762951e896",
+                "nonce": 0,
+                "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                "transactionsRoot": "0xfc0a0fff0899136834c61326c1d43f059ea61865c09783eb38f6e0ab0bd758ec",
+                "stateRoot": "0x68e577acdfd4c194910dd23593f7cf09844aca07ca9b67217063f67f1e3d0220",
+                "receiptsRoot": "0x40bf3293f44712f8fa754cdc1922b59ac0c14b131a542f98cb7ff10902912128",
+                "author": null,
+                "miner": "0xc6e2459991bfe27cca6d86722f35da23a1e4cb97",
+                "mixHash": "0xb38e40be375aa57d704f2bf2c5bb2fd4f21375f0e3bdb83d975b448fcdb51899",
+                "difficulty": 0,
+                "totalDifficulty": 50000820485795160,
+                "extraData": "0x",
+                "size": 2549,
+                "gasLimit": 30000000,
+                "gasUsed": 425402,
+                "timestamp": 1667842716,
+                "transactions": [
+                    {
+                        "value": "0xd67e64a063c3bd9c3c1aac2395ebc4fc207853fad381acf8bc4c193296ac7427"
+                    },
+                    {
+                        "value": "0x5bb521580faf9b8eecd7d2dd5c336812a648afd9421dbdccae666ebc2b28fa76"
+                    },
+                    {
+                        "value": "0x7078573c341efaa0aa48fa4ce94000fcabc34c8886c2f6793eb2da911cc44c9b"
+                    },
+                    {
+                        "value": "0x5562cd703ab60865c35981c47555b3c708fe4da99805e58c2828b5f9a07eb07a"
+                    },
+                    {
+                        "value": "0xb514ccf58554f39ddd1bcdac356b1cc144fa37f6b010172d370a6c520b430b7f"
+                    },
+                    {
+                        "value": "0xa1b5bd77a3c63417aa22319d5b5b00972f12fcb38f896cffdf7e14a5cc97d4d3"
+                    },
+                    {
+                        "value": "0x0943a56a436eb94c861032abdeb432b82a7fa559a45347adb76cd813aceaacdc"
+                    },
+                    {
+                        "value": "0xa60ba8ec75074c8d36b90491aed2f56592021b898d2015771d8489e98e7420d9"
+                    },
+                    {
+                        "value": "0x53484fd8d7fdd428c4a3a32f514d7e106a5558be8dde9e16d50ac6770badb499"
+                    }
+                ],
+                "uncles": [],
+                "sealFields": null,
+                "baseFeePerGas": "0x7",
+                "numberRaw": "0xca8b0a",
+                "nonceRaw": "0x0000000000000000",
+                "difficultyRaw": "0x0",
+                "sizeRaw": "0x9f5",
+                "gasLimitRaw": "0x1c9c380",
+                "gasUsedRaw": "0x67dba",
+                "timestampRaw": "0x6369429c",
+                "totalDifficultyRaw": "0xb1a37b3788ad55"
+            }
+        }
+    }
+}

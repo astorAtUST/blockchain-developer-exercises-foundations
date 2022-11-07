@@ -1,0 +1,88 @@
+{
+    "preparationBlockSearchResponse": {
+        "requestId": "20e65b6d-6430-43a0-a021-8b5a787e83b8",
+        "gatewayFee": {
+            "amount": "0",
+            "unit": "QNT"
+        }
+    },
+    "executionBlockSearchResponse": {
+        "location": {
+            "technology": "Bitcoin",
+            "network": "testnet"
+        },
+        "status": {
+            "value": "PENDING",
+            "code": "BLK1002",
+            "description": "Block is currently in a pending status and will be confirmed as successful or failed after a sufficient block number has been reached",
+            "message": "Block is pending.",
+            "timestamp": "1667843024"
+        },
+        "block": {
+            "blockId": "00000000000000088fef83d9de4bbd0afbaef024ba03e40e94438dcf0868c5db",
+            "timestamp": "1667843024",
+            "number": 2405229,
+            "hashes": [
+                {
+                    "value": "00000000000000088fef83d9de4bbd0afbaef024ba03e40e94438dcf0868c5db",
+                    "type": "BLOCK_HASH"
+                },
+                {
+                    "value": "00000000000000092cf70099334e6fba520564c06aabc707f153d765537f9523",
+                    "type": "PARENT_HASH"
+                },
+                {
+                    "value": "0000000000000029897521e886695743722b7aaa17edadbf8380c3254988a7f3",
+                    "type": "CHILD_HASH"
+                },
+                {
+                    "value": "487b895ee713c7847547a3662fac79088e1e18f038bfbe7214cf6c920f722ee3",
+                    "type": "TRANSACTIONS_MERKLE_ROOT"
+                }
+            ],
+            "linkedBlocks": {
+                "parent": "00000000000000092cf70099334e6fba520564c06aabc707f153d765537f9523",
+                "child": "0000000000000029897521e886695743722b7aaa17edadbf8380c3254988a7f3"
+            },
+            "size": [
+                {
+                    "type": "MEMORY",
+                    "value": "1690"
+                }
+            ],
+            "numberOfTransactions": 4,
+            "transactionIds": [
+                "67bfced15ddfb4d8e85aa13548b43a03715fdb1836757039aab99429ec38c0f9",
+                "e5991f3797aae9481859755cda68e653824fcc08875d5e380a3e547ca994def5",
+                "fd4e0f7a31649bdfd39565b23de03318b516244be6804da848f904cf831249b6",
+                "f446ea47a11ea4ec41239c8017f765f99b8d3d2dfcdea9e9fde09fbbc6172dcd"
+            ],
+            "nativeData": {
+                "hash": "00000000000000088fef83d9de4bbd0afbaef024ba03e40e94438dcf0868c5db",
+                "confirmations": 2,
+                "height": 2405229,
+                "version": 536870916,
+                "versionHex": "20000004",
+                "merkleroot": "487b895ee713c7847547a3662fac79088e1e18f038bfbe7214cf6c920f722ee3",
+                "time": 1667843024,
+                "mediantime": 1667842002,
+                "nonce": 718231297,
+                "bits": "1948dd46",
+                "difficulty": 58943801.70022102,
+                "chainwork": "0000000000000000000000000000000000000000000007f611622097df1b22d9",
+                "nTx": 4,
+                "previousblockhash": "00000000000000092cf70099334e6fba520564c06aabc707f153d765537f9523",
+                "nextblockhash": "0000000000000029897521e886695743722b7aaa17edadbf8380c3254988a7f3",
+                "strippedsize": 1007,
+                "size": 1690,
+                "weight": 4711,
+                "tx": [
+                    "67bfced15ddfb4d8e85aa13548b43a03715fdb1836757039aab99429ec38c0f9",
+                    "e5991f3797aae9481859755cda68e653824fcc08875d5e380a3e547ca994def5",
+                    "fd4e0f7a31649bdfd39565b23de03318b516244be6804da848f904cf831249b6",
+                    "f446ea47a11ea4ec41239c8017f765f99b8d3d2dfcdea9e9fde09fbbc6172dcd"
+                ]
+            }
+        }
+    }
+}

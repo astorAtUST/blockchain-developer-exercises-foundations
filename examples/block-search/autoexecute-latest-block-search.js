@@ -62,7 +62,7 @@ log.info("Executing ", courseModule);
     log.info("Creating Overledger Request Object with the Correct Location");
     const overledgerRequestMetaData = {
       location: {
-        technology: "Bitcoin",
+        technology: "XRP Ledger",
         network: "Testnet",
       },
     };
