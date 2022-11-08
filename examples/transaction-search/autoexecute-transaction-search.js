@@ -81,7 +81,17 @@ log.info("Executing ", courseModule);
     let overledgerTransactionResponse;
     let overledgerBlockResponse;
     let blockToSearch = "latest";
-
+    // Query for specific transaction
+    // query Overledger for this transaction
+    overledgerTransactionResponse = await overledgerInstance.post(
+      `/autoexecution/search/transaction?transactionId=${transactionId}`,
+      overledgerRequestMetaData,
+    );
+    log.info(
+      `The Type of this Transaction is ${overledgerTransactionResponse.data.executionTransactionSearchResponse.type}`,
+    );
+    //END Of modifications
+/*
     while (locatedPaymentTransaction === false) {
       log.info(`Asking Overledger for Block: ${blockToSearch}`);
       overledgerBlockResponse = await overledgerInstance.post(
@@ -123,7 +133,6 @@ log.info("Executing ", courseModule);
       log.info(
         `Payment Transaction Search Will Start From Transaction Number: ${transactionsInBlockCounter}`,
       );
-/*
       while (transactionsInBlockCounter >= 0) {
         // get n'th transaction id
         log.info(
@@ -151,17 +160,6 @@ log.info("Executing ", courseModule);
           transactionsInBlockCounter -= 1;
         }
       }
-      */
-// QUery for specific transaction
-// query Overledger for this transaction
-      overledgerTransactionResponse = await overledgerInstance.post(
-        `/autoexecution/search/transaction?transactionId=${transactionId}`,
-        overledgerRequestMetaData,
-      );
-      log.info(
-        `The Type of this Transaction is ${overledgerTransactionResponse.data.executionTransactionSearchResponse.type}`,
-      );
-//END Of modifications
       if (
         overledgerTransactionResponse.data.executionTransactionSearchResponse
           .type === "PAYMENT"
@@ -180,7 +178,7 @@ log.info("Executing ", courseModule);
             .number - 1;
       }
     }
-
+*/
     log.info(
       `Printing Out Overledger's Response:\n\n${JSON.stringify(
         overledgerTransactionResponse.data,
