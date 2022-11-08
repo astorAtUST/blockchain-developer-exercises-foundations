@@ -1,0 +1,115 @@
+{
+    "preparationTransactionSearchResponse": {
+        "requestId": "c25167c5-76e1-4259-a033-dd5264791aa8",
+        "gatewayFee": {
+            "amount": "0",
+            "unit": "QNT"
+        }
+    },
+    "executionTransactionSearchResponse": {
+        "location": {
+            "technology": "Bitcoin",
+            "network": "testnet"
+        },
+        "type": "PAYMENT",
+        "timestamp": "1667851251",
+        "status": {
+            "value": "PENDING",
+            "code": "TXN1002",
+            "description": "The transaction has been successfully broadcasted to the network. The status will next be updated after a sufficient block number has been reached. At this point we can be confident that the transaction will be successful or will have failed.",
+            "message": "Transaction is pending.",
+            "timestamp": "1667851251"
+        },
+        "transaction": {
+            "transactionId": "550adce5a38c208cd65b3043533574d502974eafa4995d488657add9cfad290b",
+            "signed": "020000000001012a4cd6a252b6dae1eed977eab97a6d833486a343b76e4ab95ccdb70632a993580000000000feffffff029568000000000000220020adcbebd14c4b94f8d2683ccfe186f1fed451cc5a5d66295b704a859ceccb3f341535742600000000160014a9cd06986a7786680dded50fc782fb48669893ef0248304502210095491982b9b8db37e8fb43bee6358495c95cb33fd979e529f2b7501df5c578d50220329b913fd7a7c0f4b2e536ef201a0e162ad9a2372fbf4cd0fe78d4288a54971b012103236f88a66986cf23c6c22a1bb04ce09e3f21f3e1f2df983b953d5b2981912d0f7db32400",
+            "totalPaymentAmount": [
+                {
+                    "amount": "6.45176746",
+                    "unit": "BTC"
+                }
+            ],
+            "origin": [
+                {
+                    "originId": "5893a93206b7cd5cb94a6eb743a38634836d7ab9ea77d9eee1dab652a2d64c2a:0"
+                }
+            ],
+            "destination": [
+                {
+                    "destinationId": "tb1q4h97h52vfw2035ng8n87rph3lm29rnz6t4nzjkmsf2zeemxt8u6q7hjs56",
+                    "payment": {
+                        "amount": "0.00026773",
+                        "unit": "BTC"
+                    },
+                    "smartContract": {
+                        "type": "witness_v0_scripthash"
+                    }
+                },
+                {
+                    "destinationId": "tb1q48xsdxr2w7rxsrw7658u0qhmfpnf3yl0j3y9p3",
+                    "payment": {
+                        "amount": "6.45149973",
+                        "unit": "BTC"
+                    },
+                    "smartContract": {
+                        "type": "witness_v0_keyhash"
+                    }
+                }
+            ],
+            "fee": {
+                "amount": "0.00000153",
+                "unit": "BTC"
+            },
+            "nativeData": {
+                "m": {
+                    "txid": "550adce5a38c208cd65b3043533574d502974eafa4995d488657add9cfad290b",
+                    "hash": "5ec9c06fa36daea2808bb575e9cb5de245cc00c91f6d6310cea2a5f32ac68e47",
+                    "version": 2,
+                    "size": 235,
+                    "vsize": 153,
+                    "weight": 610,
+                    "locktime": 2405245,
+                    "vin": [
+                        {
+                            "txid": "5893a93206b7cd5cb94a6eb743a38634836d7ab9ea77d9eee1dab652a2d64c2a",
+                            "vout": 0,
+                            "scriptSig": {
+                                "asm": "",
+                                "hex": ""
+                            },
+                            "txinwitness": [
+                                "304502210095491982b9b8db37e8fb43bee6358495c95cb33fd979e529f2b7501df5c578d50220329b913fd7a7c0f4b2e536ef201a0e162ad9a2372fbf4cd0fe78d4288a54971b01",
+                                "03236f88a66986cf23c6c22a1bb04ce09e3f21f3e1f2df983b953d5b2981912d0f"
+                            ],
+                            "sequence": 4294967294
+                        }
+                    ],
+                    "vout": [
+                        {
+                            "value": 0.00026773,
+                            "n": 0,
+                            "scriptPubKey": {
+                                "asm": "0 adcbebd14c4b94f8d2683ccfe186f1fed451cc5a5d66295b704a859ceccb3f34",
+                                "desc": "addr(tb1q4h97h52vfw2035ng8n87rph3lm29rnz6t4nzjkmsf2zeemxt8u6q7hjs56)#6qdjrn7a",
+                                "hex": "0020adcbebd14c4b94f8d2683ccfe186f1fed451cc5a5d66295b704a859ceccb3f34",
+                                "address": "tb1q4h97h52vfw2035ng8n87rph3lm29rnz6t4nzjkmsf2zeemxt8u6q7hjs56",
+                                "type": "witness_v0_scripthash"
+                            }
+                        },
+                        {
+                            "value": 6.45149973,
+                            "n": 1,
+                            "scriptPubKey": {
+                                "asm": "0 a9cd06986a7786680dded50fc782fb48669893ef",
+                                "desc": "addr(tb1q48xsdxr2w7rxsrw7658u0qhmfpnf3yl0j3y9p3)#2cqu3kar",
+                                "hex": "0014a9cd06986a7786680dded50fc782fb48669893ef",
+                                "address": "tb1q48xsdxr2w7rxsrw7658u0qhmfpnf3yl0j3y9p3",
+                                "type": "witness_v0_keyhash"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

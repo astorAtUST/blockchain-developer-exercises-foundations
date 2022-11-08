@@ -24,6 +24,9 @@ log.info("Loading password passed in via the command line");
 const PASSWORD_INPUT = process.argv.slice(2).toString();
 const SENV_PASSWORD = PASSWORD_INPUT.split("=")[1];
 
+//Define transaction (hardcoded)
+const myTransaction = "9b927450de58b335b794bd22f88d1005dcc6ed342336608b308f97ada425dc78"; 
+
 // Check for provided password
 if (!SENV_PASSWORD) {
   log.error(
@@ -74,7 +77,7 @@ log.info("Executing ", courseModule);
     let locatedPaymentTransaction = false;
     let numberOfTransactionsInBlock;
     let transactionsInBlockCounter;
-    let transactionId;
+    let transactionId = myTransaction; //changed to point to the pre-defined transaction.
     let overledgerTransactionResponse;
     let overledgerBlockResponse;
     let blockToSearch = "latest";
@@ -120,7 +123,7 @@ log.info("Executing ", courseModule);
       log.info(
         `Payment Transaction Search Will Start From Transaction Number: ${transactionsInBlockCounter}`,
       );
-
+/*
       while (transactionsInBlockCounter >= 0) {
         // get n'th transaction id
         log.info(
@@ -148,7 +151,26 @@ log.info("Executing ", courseModule);
           transactionsInBlockCounter -= 1;
         }
       }
-
+      */
+// QUery for specific transaction
+// query Overledger for this transaction
+      overledgerTransactionResponse = await overledgerInstance.post(
+        `/autoexecution/search/transaction?transactionId=${transactionId}`,
+        overledgerRequestMetaData,
+      );
+      log.info(
+        `The Type of this Transaction is ${overledgerTransactionResponse.data.executionTransactionSearchResponse.type}`,
+      );
+//END Of modifications
+      if (
+        overledgerTransactionResponse.data.executionTransactionSearchResponse
+          .type === "PAYMENT"
+      ) {
+        transactionsInBlockCounter = numberOfTransactionsInBlock;
+        locatedPaymentTransaction = true;
+      } else {
+        transactionsInBlockCounter -= 1;
+      }
       if (locatedPaymentTransaction === false) {
         log.info(
           `No Payment Transactions Found in Block Number ${overledgerBlockResponse.data.executionBlockSearchResponse.block.number}`,
