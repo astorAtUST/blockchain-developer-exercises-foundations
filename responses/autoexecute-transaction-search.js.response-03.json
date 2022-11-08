@@ -1,0 +1,105 @@
+{
+    "preparationTransactionSearchResponse": {
+        "requestId": "6def81af-7678-4586-8379-9462ef8f7269",
+        "gatewayFee": {
+            "amount": "0",
+            "unit": "QNT"
+        }
+    },
+    "executionTransactionSearchResponse": {
+        "location": {
+            "technology": "Bitcoin",
+            "network": "testnet"
+        },
+        "type": "PAYMENT",
+        "timestamp": "1667905566",
+        "status": {
+            "value": "SUCCESSFUL",
+            "code": "TXN1003",
+            "description": "Transaction successful",
+            "message": "Transaction successful",
+            "timestamp": "1667913120"
+        },
+        "transaction": {
+            "transactionId": "9b927450de58b335b794bd22f88d1005dcc6ed342336608b308f97ada425dc78",
+            "message": "�!��Ykj�ꃂ\u000614��T�̝6&Źo(T�9\u000f\u0013��A�",
+            "signed": "010000000001010000000000000000000000000000000000000000000000000000000000000000ffffffff1903d5b324012012090909200909200904588800e2bd3c030000ffffffff02f9c7260000000000160014820d4a343a44e915c36494995c2899abe37418930000000000000000266a24aa21a9ed596b6aa8ea8382063134aeeb9154f5cc9d3626c5b96f285480390f13f5e041b40120000000000000000000000000000000000000000000000000000000000000000000000000",
+            "totalPaymentAmount": [
+                {
+                    "amount": "0.02541561",
+                    "unit": "BTC"
+                }
+            ],
+            "origin": [
+                {
+                    "originId": "coinbase"
+                }
+            ],
+            "destination": [
+                {
+                    "destinationId": "tb1qsgx55dp6gn53tsmyjjv4c2ye403hgxynxs0dnm",
+                    "payment": {
+                        "amount": "0.02541561",
+                        "unit": "BTC"
+                    },
+                    "smartContract": {
+                        "type": "witness_v0_keyhash"
+                    }
+                },
+                {
+                    "destinationId": "",
+                    "payment": {
+                        "amount": "0",
+                        "unit": "BTC"
+                    },
+                    "smartContract": {
+                        "type": "nulldata"
+                    }
+                }
+            ],
+            "nativeData": {
+                "m": {
+                    "txid": "9b927450de58b335b794bd22f88d1005dcc6ed342336608b308f97ada425dc78",
+                    "hash": "9bd510b61822ff8453f5a37b9cc264370cfd612d76d6cb70409cb8a9469e6e24",
+                    "version": 1,
+                    "size": 190,
+                    "vsize": 163,
+                    "weight": 652,
+                    "locktime": 0,
+                    "vin": [
+                        {
+                            "coinbase": "03d5b324012012090909200909200904588800e2bd3c030000",
+                            "txinwitness": [
+                                "0000000000000000000000000000000000000000000000000000000000000000"
+                            ],
+                            "sequence": 4294967295
+                        }
+                    ],
+                    "vout": [
+                        {
+                            "value": 0.02541561,
+                            "n": 0,
+                            "scriptPubKey": {
+                                "asm": "0 820d4a343a44e915c36494995c2899abe3741893",
+                                "desc": "addr(tb1qsgx55dp6gn53tsmyjjv4c2ye403hgxynxs0dnm)#27sfr2v5",
+                                "hex": "0014820d4a343a44e915c36494995c2899abe3741893",
+                                "address": "tb1qsgx55dp6gn53tsmyjjv4c2ye403hgxynxs0dnm",
+                                "type": "witness_v0_keyhash"
+                            }
+                        },
+                        {
+                            "value": 0,
+                            "n": 1,
+                            "scriptPubKey": {
+                                "asm": "OP_RETURN aa21a9ed596b6aa8ea8382063134aeeb9154f5cc9d3626c5b96f285480390f13f5e041b4",
+                                "desc": "raw(6a24aa21a9ed596b6aa8ea8382063134aeeb9154f5cc9d3626c5b96f285480390f13f5e041b4)#wz8pcp7z",
+                                "hex": "6a24aa21a9ed596b6aa8ea8382063134aeeb9154f5cc9d3626c5b96f285480390f13f5e041b4",
+                                "type": "nulldata"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
