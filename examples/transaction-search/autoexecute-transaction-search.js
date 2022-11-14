@@ -28,7 +28,7 @@ const SENV_PASSWORD = PASSWORD_INPUT.split("=")[1];
 const myBTCTransaction = "9b927450de58b335b794bd22f88d1005dcc6ed342336608b308f97ada425dc78";
 const myETHTransaction = "0x8edafc9a7e14f393fce99931554572c9cec5dd6577b8a32e74bcb144f6d13401";
 const myXRPTransaction = "b8a3784d705420e97cc5efe955f1ed2865726c9fb308dce067c0d55e5bd78ea6";
-const myTransaction = myXRPTransaction;
+const myTransaction = myETHTransaction;
 
 
 // Check for provided password
@@ -69,8 +69,8 @@ log.info("Executing ", courseModule);
     );
     const overledgerRequestMetaData = {
       location: {
-        technology: "XRP Ledger",
-        network: "Testnet",
+        technology: "Ethereum",
+        network: "Ropsten Testnet",
       },
     };
     const overledgerInstance = overledger.provider.createRequest(
