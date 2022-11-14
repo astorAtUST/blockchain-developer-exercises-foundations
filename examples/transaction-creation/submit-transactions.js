@@ -9,6 +9,10 @@ const courseModule = "submit-transaction";
 const { DltNameOptions } = OverledgerTypes;
 
 const log = log4js.getLogger(courseModule);
+//Default "other" addresses to send the coins
+const myBTCAddress = "tb1qu2w97ss9735duljjd9kzu0fa43gkuh4jd69wuy";
+const myETHAddress = "0xd6174f1649f49555Dc9e094d7E04b0856cC4BED4";
+const myXRPAddress = "";
 
 // Initialize log
 log4js.configure({
@@ -58,11 +62,15 @@ log.info("Executing ", courseModule);
       envFilePassword: SENV_PASSWORD,
     });
     log.info("Creating random addresses to send transactions to");
-    const bitcoinAccount = await overledger.dlts.bitcoin.createAccount();
-    const bitcoinDestination = bitcoinAccount.address;
+    //const bitcoinAccount = await overledger.dlts.bitcoin.createAccount();
+    //const bitcoinDestination = bitcoinAccount.address;
+    //Changed to other account
+    const bitcoinDestination = myBTCAddress;
 
-    const ethAccount = await overledger.dlts.ethereum.createAccount();
-    const ethereumDestination = ethAccount.address;
+    //const ethAccount = await overledger.dlts.ethereum.createAccount();
+    //const ethereumDestination = ethAccount.address;
+    //Changed to other account
+    const ethereumDestination = myETHAddress;
 
     const xrpAccount = await overledger.dlts["xrp-ledger"].createAccount();
     const xrpLedgerDestination = xrpAccount.address;
@@ -103,7 +111,7 @@ log.info("Executing ", courseModule);
       {
         location: {
           technology: "Ethereum",
-          network: "Ropsten Testnet",
+          network: "ethereum goerli testnet",
         },
       },
       {
