@@ -1,0 +1,345 @@
+[
+    2022-11-14T12: 01: 48.475
+] [INFO
+] utxo-state-search - Loading password passed in via the command line
+[
+    2022-11-14T12: 01: 48.488
+] [INFO
+] utxo-state-search - Executing  utxo-state-search
+[
+    2022-11-14T12: 01: 48.493
+] [INFO
+] utxo-state-search - Initializing the SDK
+[
+    2022-11-14T12: 01: 52.558
+] [INFO
+] utxo-state-search - Obtaining the Access Token to Interact with Overledger
+[
+    2022-11-14T12: 01: 55.208
+] [INFO
+] utxo-state-search - Creating the Overledger Request Object with the Correct Location
+[
+    2022-11-14T12: 01: 55.222
+] [INFO
+] utxo-state-search - Locating the Largest Unspent UTXO in a recent Block
+[
+    2022-11-14T12: 01: 55.229
+] [INFO
+] utxo-state-search - Asking Overledger for the pre-defined Block
+[
+    2022-11-14T12: 01: 55.236
+] [INFO
+] utxo-state-search - Asking Overledger for the Block 20 Back from the Latest
+[
+    2022-11-14T12: 01: 55.893
+] [INFO
+] utxo-state-search - Transactions in Block = 9
+[
+    2022-11-14T12: 01: 55.896
+] [INFO
+] utxo-state-search - Asking Overledger for Transaction 0 in Block 0000000000000024fc216cbafc9c8b7e39679d27a135f0d769c5d8087b1afe19
+[
+    2022-11-14T12: 01: 55.898
+] [INFO
+] utxo-state-search - The Id of this Transaction is f3539f94241bce0a3443de766262252448cddf1e5af6e92695c449ebbe547a3a
+[
+    2022-11-14T12: 01: 56.376
+] [INFO
+] utxo-state-search - This Transaction has 2 destinations
+[
+    2022-11-14T12: 01: 56.377
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 1 in Transaction 0
+[
+    2022-11-14T12: 01: 56.848
+] [INFO
+] utxo-state-search - The UTXO has a status of UNSPENDABLE_SUCCESSFUL
+[
+    2022-11-14T12: 01: 56.849
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 0 in Transaction 0
+[
+    2022-11-14T12: 01: 57.321
+] [INFO
+] utxo-state-search - The UTXO has a status of UNSPENT_SUCCESSFUL
+[
+    2022-11-14T12: 01: 57.322
+] [INFO
+] utxo-state-search - Asking Overledger for Transaction 1 in Block 0000000000000024fc216cbafc9c8b7e39679d27a135f0d769c5d8087b1afe19
+[
+    2022-11-14T12: 01: 57.323
+] [INFO
+] utxo-state-search - The Id of this Transaction is e69bb9d617d187a3cdc103474b1f174d2fcd46612adcaded3c79e79b4365f43f
+[
+    2022-11-14T12: 01: 57.814
+] [INFO
+] utxo-state-search - This Transaction has 2 destinations
+[
+    2022-11-14T12: 01: 57.816
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 1 in Transaction 1
+[
+    2022-11-14T12: 01: 58.312
+] [INFO
+] utxo-state-search - The UTXO has a status of SPENT
+[
+    2022-11-14T12: 01: 58.315
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 0 in Transaction 1
+[
+    2022-11-14T12: 01: 58.824
+] [INFO
+] utxo-state-search - The UTXO has a status of UNSPENT_SUCCESSFUL
+[
+    2022-11-14T12: 01: 58.825
+] [INFO
+] utxo-state-search - Asking Overledger for Transaction 2 in Block 0000000000000024fc216cbafc9c8b7e39679d27a135f0d769c5d8087b1afe19
+[
+    2022-11-14T12: 01: 58.825
+] [INFO
+] utxo-state-search - The Id of this Transaction is b8ab2a1f78fd628a1069ee44f79577549737c306ca1e10100829528b344df8cd
+[
+    2022-11-14T12: 01: 59.331
+] [INFO
+] utxo-state-search - This Transaction has 2 destinations
+[
+    2022-11-14T12: 01: 59.332
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 1 in Transaction 2
+[
+    2022-11-14T12: 01: 59.830
+] [INFO
+] utxo-state-search - The UTXO has a status of UNSPENT_SUCCESSFUL
+[
+    2022-11-14T12: 01: 59.832
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 0 in Transaction 2
+[
+    2022-11-14T12: 02: 00.352
+] [INFO
+] utxo-state-search - The UTXO has a status of SPENT
+[
+    2022-11-14T12: 02: 00.353
+] [INFO
+] utxo-state-search - Asking Overledger for Transaction 3 in Block 0000000000000024fc216cbafc9c8b7e39679d27a135f0d769c5d8087b1afe19
+[
+    2022-11-14T12: 02: 00.353
+] [INFO
+] utxo-state-search - The Id of this Transaction is 45ea1b18df089db6b26b87267ce246322b6ca4e194dded4498d2038869f00692
+[
+    2022-11-14T12: 02: 00.842
+] [INFO
+] utxo-state-search - This Transaction has 2 destinations
+[
+    2022-11-14T12: 02: 00.844
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 1 in Transaction 3
+[
+    2022-11-14T12: 02: 01.345
+] [INFO
+] utxo-state-search - The UTXO has a status of UNSPENT_SUCCESSFUL
+[
+    2022-11-14T12: 02: 01.346
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 0 in Transaction 3
+[
+    2022-11-14T12: 02: 01.850
+] [INFO
+] utxo-state-search - The UTXO has a status of UNSPENT_SUCCESSFUL
+[
+    2022-11-14T12: 02: 01.852
+] [INFO
+] utxo-state-search - Asking Overledger for Transaction 4 in Block 0000000000000024fc216cbafc9c8b7e39679d27a135f0d769c5d8087b1afe19
+[
+    2022-11-14T12: 02: 01.852
+] [INFO
+] utxo-state-search - The Id of this Transaction is 708da24324eff4c7ddee1fd29f9f5cd2b2f84d398c6d507aad5a88bbf307ceb0
+[
+    2022-11-14T12: 02: 02.335
+] [INFO
+] utxo-state-search - This Transaction has 2 destinations
+[
+    2022-11-14T12: 02: 02.337
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 1 in Transaction 4
+[
+    2022-11-14T12: 02: 02.834
+] [INFO
+] utxo-state-search - The UTXO has a status of UNSPENT_SUCCESSFUL
+[
+    2022-11-14T12: 02: 02.835
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 0 in Transaction 4
+[
+    2022-11-14T12: 02: 03.327
+] [INFO
+] utxo-state-search - The UTXO has a status of UNSPENT_SUCCESSFUL
+[
+    2022-11-14T12: 02: 03.329
+] [INFO
+] utxo-state-search - Asking Overledger for Transaction 5 in Block 0000000000000024fc216cbafc9c8b7e39679d27a135f0d769c5d8087b1afe19
+[
+    2022-11-14T12: 02: 03.329
+] [INFO
+] utxo-state-search - The Id of this Transaction is c62d34095f455f81628b5469f7bf34f8fa23d8b511e167486040ad8055c7cb09
+[
+    2022-11-14T12: 02: 03.809
+] [INFO
+] utxo-state-search - This Transaction has 2 destinations
+[
+    2022-11-14T12: 02: 03.810
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 1 in Transaction 5
+[
+    2022-11-14T12: 02: 04.336
+] [INFO
+] utxo-state-search - The UTXO has a status of SPENT
+[
+    2022-11-14T12: 02: 04.338
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 0 in Transaction 5
+[
+    2022-11-14T12: 02: 04.853
+] [INFO
+] utxo-state-search - The UTXO has a status of SPENT
+[
+    2022-11-14T12: 02: 04.854
+] [INFO
+] utxo-state-search - Asking Overledger for Transaction 6 in Block 0000000000000024fc216cbafc9c8b7e39679d27a135f0d769c5d8087b1afe19
+[
+    2022-11-14T12: 02: 04.854
+] [INFO
+] utxo-state-search - The Id of this Transaction is 74bf40fa5cfe46de969d8ceab94c999149e7821e27b79f5345b2e75e29e1ab5c
+[
+    2022-11-14T12: 02: 05.334
+] [INFO
+] utxo-state-search - This Transaction has 1 destinations
+[
+    2022-11-14T12: 02: 05.336
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 0 in Transaction 6
+[
+    2022-11-14T12: 02: 05.831
+] [INFO
+] utxo-state-search - The UTXO has a status of SPENT
+[
+    2022-11-14T12: 02: 05.833
+] [INFO
+] utxo-state-search - Asking Overledger for Transaction 7 in Block 0000000000000024fc216cbafc9c8b7e39679d27a135f0d769c5d8087b1afe19
+[
+    2022-11-14T12: 02: 05.833
+] [INFO
+] utxo-state-search - The Id of this Transaction is abd62f8713c96cd27cddbf4b0c1d910ff97a09b2f58f8eb3be045afcc874e4a0
+[
+    2022-11-14T12: 02: 06.328
+] [INFO
+] utxo-state-search - This Transaction has 1 destinations
+[
+    2022-11-14T12: 02: 06.330
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 0 in Transaction 7
+[
+    2022-11-14T12: 02: 06.785
+] [INFO
+] utxo-state-search - The UTXO has a status of SPENT
+[
+    2022-11-14T12: 02: 06.788
+] [INFO
+] utxo-state-search - Asking Overledger for Transaction 8 in Block 0000000000000024fc216cbafc9c8b7e39679d27a135f0d769c5d8087b1afe19
+[
+    2022-11-14T12: 02: 06.788
+] [INFO
+] utxo-state-search - The Id of this Transaction is 6b4818f5982f8ae6e5f7a139c1c3472ceeaee982153943043bfef6f5a07e47cc
+[
+    2022-11-14T12: 02: 07.264
+] [INFO
+] utxo-state-search - This Transaction has 2 destinations
+[
+    2022-11-14T12: 02: 07.266
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 1 in Transaction 8
+[
+    2022-11-14T12: 02: 07.733
+] [INFO
+] utxo-state-search - The UTXO has a status of SPENT
+[
+    2022-11-14T12: 02: 07.735
+] [INFO
+] utxo-state-search - Asking Overledger for UTXO 0 in Transaction 8
+[
+    2022-11-14T12: 02: 08.227
+] [INFO
+] utxo-state-search - The UTXO has a status of UNSPENT_SUCCESSFUL
+[
+    2022-11-14T12: 02: 08.227
+] [INFO
+] utxo-state-search - 
+[
+    2022-11-14T12: 02: 08.227
+] [INFO
+] utxo-state-search - In Block 0000000000000024fc216cbafc9c8b7e39679d27a135f0d769c5d8087b1afe19: [
+    2022-11-14T12: 02: 08.227
+] [INFO
+] utxo-state-search - The Largest UTXO is: f3539f94241bce0a3443de766262252448cddf1e5af6e92695c449ebbe547a3a: 0
+[
+    2022-11-14T12: 02: 08.227
+] [INFO
+] utxo-state-search - The Address with the Largest UTXO is: tb1qccr9f2fjfjj6ur72fljeug6x0guawuupcr234d
+[
+    2022-11-14T12: 02: 08.227
+] [INFO
+] utxo-state-search - This UTXO has locked: 0.02488397 BTC
+[
+    2022-11-14T12: 02: 08.227
+] [INFO
+] utxo-state-search - Overledger's Response For the Max UTXO Was: {
+    "preparationUtxoSearchResponse": {
+        "requestId": "e320ec2f-0e96-452d-bb93-b01af00098aa",
+        "gatewayFee": {
+            "amount": "0",
+            "unit": "QNT"
+        }
+    },
+    "executionUtxoSearchResponse": {
+        "location": {
+            "technology": "Bitcoin",
+            "network": "testnet"
+        },
+        "timestamp": "1668416334",
+        "status": {
+            "value": "UTX1000",
+            "code": "UNSPENT_SUCCESSFUL",
+            "description": "The UTXO has been created in a transaction that is in successful status and can be spent.",
+            "message": "UTXO can be spent.",
+            "timestamp": "1668423235"
+        },
+        "nativeData": {
+            "vout": [
+                {
+                    "value": 0.02488397,
+                    "n": 0,
+                    "scriptPubKey": {
+                        "asm": "0 c60654a9324ca5ae0fca4fe59e23467a39d77381",
+                        "desc": "addr(tb1qccr9f2fjfjj6ur72fljeug6x0guawuupcr234d)#x02d5yj0",
+                        "hex": "0014c60654a9324ca5ae0fca4fe59e23467a39d77381",
+                        "address": "tb1qccr9f2fjfjj6ur72fljeug6x0guawuupcr234d",
+                        "type": "witness_v0_keyhash"
+                    }
+                }
+            ]
+        },
+        "destination": [
+            {
+                "destinationId": "tb1qccr9f2fjfjj6ur72fljeug6x0guawuupcr234d",
+                "payment": {
+                    "amount": "0.02488397",
+                    "unit": "BTC"
+                },
+                "smartContract": {
+                    "type": "witness_v0_keyhash"
+                }
+            }
+        ],
+        "utxoId": "f3539f94241bce0a3443de766262252448cddf1e5af6e92695c449ebbe547a3a:0"
+    }
+}

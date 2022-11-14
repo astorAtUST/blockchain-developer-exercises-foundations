@@ -10,6 +10,10 @@ const { DltNameOptions } = OverledgerTypes;
 
 const log = log4js.getLogger(courseModule);
 
+//Hardcoded UtxoId & BlockId
+const myBlock = "0000000000000024fc216cbafc9c8b7e39679d27a135f0d769c5d8087b1afe19";
+const myUtxo = "f3539f94241bce0a3443de766262252448cddf1e5af6e92695c449ebbe547a3a:0";
+
 // Initialize log
 log4js.configure({
   appenders: {
@@ -83,6 +87,49 @@ log.info("Executing ", courseModule);
     let overledgerUTXOMaxBalanceResponse;
     let utxoStatus;
 
+    //Custom code to search for specific UTXO
+    log.info(
+      `Asking Overledger for UTXO ${myUtxo}`,
+    );
+    overledgerUTXOResponse = await overledgerInstance.post(
+      `/autoexecution/search/utxo/${myUtxo}`,
+      overledgerRequestMetaData,
+    );
+    let myUtxoStatus =
+      overledgerUTXOResponse.data.executionUtxoSearchResponse.status.code;
+    let myUtxoBalanceUnit =
+    overledgerUTXOResponse.data.executionUtxoSearchResponse.destination[0]
+      .payment.unit;
+    let myUtxoDestination =
+      overledgerUTXOResponse.data.executionUtxoSearchResponse
+        .destination[0].destinationId;
+    let myUtxoAmount =
+      overledgerUTXOResponse.data.executionUtxoSearchResponse
+        .destination[0].payment.amount;
+    log.info();
+    log.info(`The Requested UTXO is: ${myUtxo}`);
+    log.info(`The Address with the Largest UTXO is: ${myUtxoDestination}`);
+    log.info(`This UTXO balance is/was: ${myUtxoAmount} ${myUtxoBalanceUnit}`);
+    log.info(`The Status of the UTXO is: ${myUtxoStatus}`);
+
+    log.info(
+      `Overledger's Response For the Requested UTXO Was:\n\n${JSON.stringify(
+        overledgerUTXOResponse.data,
+      )}\n\n`,
+    );
+    //End of custom code for specific utxo
+/*
+    //Pre-defined blocknumber just for fun.
+    log.info(`Asking Overledger for the pre-defined Block`);
+    const blockNumber = myBlock;
+    let overledgerBlockResponse = await overledgerInstance.post(
+      `/autoexecution/search/block/${blockNumber}`,
+      overledgerRequestMetaData,
+    );
+    //END of custom code for pre-assigned block
+
+    //Commented to play out with code
+
     log.info(`Asking Overledger for the Latest Block`);
     let overledgerBlockResponse = await overledgerInstance.post(
       `/autoexecution/search/block/latest`,
@@ -92,17 +139,18 @@ log.info("Executing ", courseModule);
       overledgerBlockResponse.data.executionBlockSearchResponse.block.number -
       20;
     log.info(`Asking Overledger for the Block 20 Back from the Latest`);
-    overledgerBlockResponse = await overledgerInstance.post(
+    let overledgerBlockResponse = await overledgerInstance.post(
       `/autoexecution/search/block/${blockNumber}`,
       overledgerRequestMetaData,
     );
+    */
+/*
     const transactionsInBlock =
       overledgerBlockResponse.data.executionBlockSearchResponse.block
         .numberOfTransactions - 1;
     log.info(
       `Transactions in Block = ${overledgerBlockResponse.data.executionBlockSearchResponse.block.numberOfTransactions}`,
     );
-
     // check if there is any transactions in this block
     if (transactionsInBlock < 0) {
       log.info(`The latest block has no transactions. Please try again later`);
@@ -139,7 +187,8 @@ log.info("Executing ", courseModule);
           );
           utxoStatus =
             overledgerUTXOResponse.data.executionUtxoSearchResponse.status.code;
-          log.info(`The UTXO has a status of ${utxoStatus}`);
+          log.info(`The UTXO has a status of ${utxoStatus} on ${overledgerUTXOResponse.data.executionUtxoSearchResponse
+            .destination[0].payment.amount}`);
           if (utxoStatus === "UNSPENT_SUCCESSFUL") {
             thisUtxoAmount =
               overledgerUTXOResponse.data.executionUtxoSearchResponse
@@ -157,7 +206,6 @@ log.info("Executing ", courseModule);
         }
         counter += 1;
       }
-
       const balanceUnit =
         overledgerUTXOResponse.data.executionUtxoSearchResponse.destination[0]
           .payment.unit;
@@ -173,6 +221,7 @@ log.info("Executing ", courseModule);
         )}\n\n`,
       );
     }
+    */
   } catch (e) {
     log.error("error", e);
   }
