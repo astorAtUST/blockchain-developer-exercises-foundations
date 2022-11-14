@@ -1,5 +1,5 @@
 // NOTE: You need to have a .env.enc file in the root directory where you are running the node command
-
+ 
 const log4js = require("log4js");
 const OverledgerBundle = require("@quantnetwork/overledger-bundle");
 const OverledgerTypes = require("@quantnetwork/overledger-types");
@@ -25,7 +25,11 @@ const PASSWORD_INPUT = process.argv.slice(2).toString();
 const SENV_PASSWORD = PASSWORD_INPUT.split("=")[1];
 
 //Define transaction (hardcoded)
-const myTransaction = "9b927450de58b335b794bd22f88d1005dcc6ed342336608b308f97ada425dc78"; 
+const myBTCTransaction = "9b927450de58b335b794bd22f88d1005dcc6ed342336608b308f97ada425dc78";
+const myETHTransaction = "0x8edafc9a7e14f393fce99931554572c9cec5dd6577b8a32e74bcb144f6d13401";
+const myXRPTransaction = "b8a3784d705420e97cc5efe955f1ed2865726c9fb308dce067c0d55e5bd78ea6";
+const myTransaction = myXRPTransaction;
+
 
 // Check for provided password
 if (!SENV_PASSWORD) {
@@ -65,7 +69,7 @@ log.info("Executing ", courseModule);
     );
     const overledgerRequestMetaData = {
       location: {
-        technology: "Bitcoin",
+        technology: "XRP Ledger",
         network: "Testnet",
       },
     };
@@ -87,6 +91,7 @@ log.info("Executing ", courseModule);
       `/autoexecution/search/transaction?transactionId=${transactionId}`,
       overledgerRequestMetaData,
     );
+    log.info(`The transaction Response DATA is: ${JSON.stringify(overledgerTransactionResponse.data)}`)
     log.info(
       `The Type of this Transaction is ${overledgerTransactionResponse.data.executionTransactionSearchResponse.type}`,
     );
