@@ -10,6 +10,11 @@ const { DltNameOptions } = OverledgerTypes;
 
 const log = log4js.getLogger(courseModule);
 
+//Accounts for the different networks...
+const myETHaccount = "0x81b7E08F65Bdf5648606c89998A9CC8164397647";
+const myXRPAccount = "rPd9oB2Kdot9HSsXSeFYpKZUV3vDsBzv73";
+const myAccount = myXRPAccount;
+
 // Initialize log
 log4js.configure({
   appenders: {
@@ -62,8 +67,8 @@ log.info("Executing ", courseModule);
     );
     const overledgerRequestMetaData = {
       location: {
-        technology: "Ethereum",
-        network: "Ropsten Testnet",
+        technology: "XRP Ledger",
+        network: "Testnet",
       },
     };
     const overledgerInstance = overledger.provider.createRequest(
@@ -87,6 +92,49 @@ log.info("Executing ", courseModule);
     let overledgerAddressMaxBalanceResponse;
     let overledgerAddressMaxSequenceResponse;
 
+    //Custom code Ex6
+    // query Overledger for the account's balance
+    overledgerAddressBalanceResponse = await overledgerInstance.post(
+      `/autoexecution/search/address/balance/${myAccount}`,
+      overledgerRequestMetaData,
+    );
+    let myBalance =
+      overledgerAddressBalanceResponse.data
+        .executionAddressBalanceSearchResponse.balances[0].amount;
+    // query Overledger for the origin's sequence
+    overledgerAddressSequenceResponse = await overledgerInstance.post(
+      `/autoexecution/search/address/sequence/${myAccount}`,
+      overledgerRequestMetaData,
+    );
+    let mySequence =
+      overledgerAddressSequenceResponse.data
+        .executionAddressSequenceSearchResponse.sequence;
+    const myBalanceUnit =
+      overledgerAddressBalanceResponse.data
+        .executionAddressBalanceSearchResponse.balances[0].unit;
+    //Logging data
+    log.info();
+    log.info(
+      `The Address specified is: ${myAccount}`,
+    );myAccount
+    log.info(`This Address had a Balance of: ${myBalance} ${myBalanceUnit}`);
+    log.info(`This Address had a Sequence Number of: ${mySequence}`);
+    log.info(
+      `Overledger's Response For the Max Balance Was:\n\n${JSON.stringify(
+        overledgerAddressBalanceResponse.data,
+      )}\n\n`,
+    );
+    log.info(
+      `Overledger's Response For the Max Sequence Was:\n\n${JSON.stringify(
+        overledgerAddressSequenceResponse.data,
+      )}\n\n`,
+    );
+    //END of custom code Ex6
+    //END of custom code
+
+
+  //Commented for the exercise 6.
+  /*
     log.info(`Asking Overledger for the latest Block`);
     const overledgerBlockResponse = await overledgerInstance.post(
       `/autoexecution/search/block/latest`,
@@ -100,7 +148,6 @@ log.info("Executing ", courseModule);
     log.info(
       `Transactions in Block = ${overledgerBlockResponse.data.executionBlockSearchResponse.block.numberOfTransactions}`,
     );
-
     // check if there is any transactions in this block
     if (transactionsInBlock < 0) {
       log.info(`The latest block has no transactions. Please try again later.`);
@@ -184,6 +231,7 @@ log.info("Executing ", courseModule);
         )}\n\n`,
       );
     }
+  */
   } catch (e) {
     log.error("error", e);
   }
